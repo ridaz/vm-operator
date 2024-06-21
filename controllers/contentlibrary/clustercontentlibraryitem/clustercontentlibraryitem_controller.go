@@ -263,6 +263,7 @@ func (r *Reconciler) setUpCVMIFromCCLItem(ctx *pkgctx.ClusterContentLibraryItemC
 	}
 
 	labelKeyPrefix := utils.TKGServiceTypeLabelKeyPrefix
+	r.Logger.Info("pkgcfg.FromContext(ctx).Features.TKGMultipleCL", "TKGMultipleCL", pkgcfg.FromContext(ctx).Features.TKGMultipleCL)
 	if pkgcfg.FromContext(ctx).Features.TKGMultipleCL {
 		labelKeyPrefix = utils.MultipleCLServiceTypeLabelKeyPrefix
 
